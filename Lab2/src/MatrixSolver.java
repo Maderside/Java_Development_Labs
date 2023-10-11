@@ -17,13 +17,13 @@ public class MatrixSolver {
         int rowB = mtrxB.length;
         int colB = mtrxB[0].length;
 
-        if (rowA!=colB || colA!=rowB){  //If number of rows and columns in matrix A and B is not suitable for multiplication
-            throw new IllegalArgumentException("Number of rows in matrix A and number of columns in matrix B should be equal");
+        if (colA!=rowB){  //If number of rows and columns in matrix A and B is not suitable for multiplication
+            throw new IllegalArgumentException("Number of columns in first matrix and number of rows in second matrix should be equal");
         }
 
         long[][] res = new long[rowA][colB];    //result matrix
 
-        //loop through matrix A and B
+        //loop through matrix A and B and multiply
         for (int i = 0; i < rowA; i++) {
             for (int q = 0; q < colB; q++) {
                 long sum = 0;   //sum of multiplication of matrix A row by matrix B column
