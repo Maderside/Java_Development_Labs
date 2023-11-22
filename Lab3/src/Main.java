@@ -2,7 +2,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        StringBuffer str = new StringBuffer("   This sentence is first.   This sentence is second? This sentence is third!  ");
+        StringBuffer str = new StringBuffer("Word");
         System.out.println("Original string: " + str);
         System.out.println("Original length: " + str.length());
 
