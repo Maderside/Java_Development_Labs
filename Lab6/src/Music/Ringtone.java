@@ -1,3 +1,5 @@
+package Music;
+
 /**
  * Describes a ringtone type of composition
  */

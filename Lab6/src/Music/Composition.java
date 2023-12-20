@@ -1,10 +1,12 @@
+package Music;
+
 /**
- * Superclass, describe basic interface and functionality for subclasses
+ * Superclass, describe basic interface and functionality for composition subclasses
  */
 public abstract class Composition {
-    private String name;
-    private String genre;
-    private float duration;
+    private final String name;
+    private final String genre;
+    private final float duration;
 
 
     public Composition(String name, String genre, float duration){

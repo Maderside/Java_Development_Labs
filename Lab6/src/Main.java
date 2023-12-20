@@ -1,3 +1,8 @@
+import Music.Composition;
+import Music.Instrumental;
+import Music.Ringtone;
+import Music.Song;
+
 import java.util.Comparator;
 
 public class Main {
@@ -13,7 +18,7 @@ public class Main {
         System.out.print(alb);
         System.out.println();
 
-        System.out.println("Composition with a duration in range between 4m and 6m");
+        System.out.println("Music.Composition with a duration in range between 4m and 6m");
         System.out.println(alb.findComposition(4f,6f));
         System.out.println();
 

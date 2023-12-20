@@ -1,7 +1,9 @@
+package Music;
+
 /**
  * Describes a song type of composition, has a singer
  */
-public class Song extends Composition{
+public class Song extends Composition {
     private final String singer;
     public Song(String name, String genre, float duration, String singer) {
         super(name, genre, duration);

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
-
+import Music.Composition;
 /**
  * Contains an array of compositions
  */

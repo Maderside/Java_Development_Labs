@@ -1,7 +1,9 @@
+package Music;
+
 /**
  * Describes an instrumental type of composition, has a number of instruments
  */
-public class Instrumental extends Composition{
+public class Instrumental extends Composition {
     private final int numOfInst;
     public Instrumental(String name, String genre, float duration, int n) {
         super(name, genre, duration);
