@@ -96,13 +96,14 @@ public class MyList<Composition extends Music.Composition> implements List<Compo
                 current = current.next;
                 return data;
             }
+
+
         };
     }
 
     @Override
-    public Composition[] toArray() {
-        @SuppressWarnings("unchecked")
-        Composition[] array = (Composition[]) new Object[size];
+    public Music.Composition[] toArray() {
+        Music.Composition[] array = new Music.Composition[size];
         Node current = head;
         int index = 0;
 
@@ -114,7 +115,6 @@ public class MyList<Composition extends Music.Composition> implements List<Compo
         return array;
     }
 
-    //Check what is this later?
     @Override
     public <T> T[] toArray(T[] a) {
         if (a.length < size) {
@@ -265,12 +265,13 @@ public class MyList<Composition extends Music.Composition> implements List<Compo
     public boolean retainAll(Collection<?> c) {
         boolean modified = false;
 
-        // Iterate over the list and retain elements present in the collection
-        Iterator<Composition> iterator = iterator();
-        while (iterator.hasNext()) {
-            Composition element = iterator.next();
+        // Use MyListIterator instead of Iterator
+        MyListIterator myListIterator = new MyListIterator();
+
+        while (myListIterator.hasNext()) {
+            Composition element = myListIterator.next();
             if (!c.contains(element)) {
-                iterator.remove();
+                myListIterator.remove();
                 modified = true;
             }
         }
